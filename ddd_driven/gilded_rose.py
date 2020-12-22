@@ -30,12 +30,11 @@ class RawItem:
 
 class Normal(RawItem):
     def update_item_quality(self):
-        if self.quality > 0:
+        if 0 < self.quality:
             self.quality = self.quality - 1
         self.sell_in = self.sell_in - 1
-        if self.sell_in < 0:
-            if self.quality > 0:
-                self.quality = self.quality - 1
+        if self.sell_in < 0 and 0 < self.quality:
+            self.quality = self.quality - 1
 
 
 class AgedBrie(RawItem):
