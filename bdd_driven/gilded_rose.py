@@ -8,7 +8,11 @@ class GildedRose(object):
             item.update_item_quality()
 
 
-class Item:
+def create_item(name, sell_in, quality):
+    return RawItem(name, sell_in, quality)
+
+
+class RawItem:
     def __init__(self, name, sell_in, quality):
         self.name = name
         self.sell_in = sell_in

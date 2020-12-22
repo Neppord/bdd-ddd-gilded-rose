@@ -1,11 +1,11 @@
-from gilded_rose import GildedRose, Item
+from gilded_rose import GildedRose, create_item
 
 
 def test_update_sell_in():
-    normal_item = Item("normal", 2, 10)
-    aged_brie = Item("Aged Brie", 2, 10)
-    sulfuras_item = Item("Sulfuras, Hand of Ragnaros", 2, 10)
-    backstage_pass_item = Item("Backstage passes to a TAFKAL80ETC concert", 2, 10)
+    normal_item = create_item("normal", 2, 10)
+    aged_brie = create_item("Aged Brie", 2, 10)
+    sulfuras_item = create_item("Sulfuras, Hand of Ragnaros", 2, 10)
+    backstage_pass_item = create_item("Backstage passes to a TAFKAL80ETC concert", 2, 10)
     items = [
         normal_item,
         aged_brie,
@@ -20,12 +20,12 @@ def test_update_sell_in():
 
 
 def test_update_quality():
-    normal_item = Item("normal", 2, 10)
-    aged_brie = Item("Aged Brie", 2, 10)
-    sulfuras_item = Item("Sulfuras, Hand of Ragnaros", 2, 10)
-    early_backstage_pass_item = Item("Backstage passes to a TAFKAL80ETC concert", 10, 10)
-    backstage_pass_item = Item("Backstage passes to a TAFKAL80ETC concert", 5, 10)
-    late_backstage_pass_item = Item("Backstage passes to a TAFKAL80ETC concert", 0, 10)
+    normal_item = create_item("normal", 2, 10)
+    aged_brie = create_item("Aged Brie", 2, 10)
+    sulfuras_item = create_item("Sulfuras, Hand of Ragnaros", 2, 10)
+    early_backstage_pass_item = create_item("Backstage passes to a TAFKAL80ETC concert", 10, 10)
+    backstage_pass_item = create_item("Backstage passes to a TAFKAL80ETC concert", 5, 10)
+    late_backstage_pass_item = create_item("Backstage passes to a TAFKAL80ETC concert", 0, 10)
     items = [
         normal_item,
         aged_brie,
@@ -44,9 +44,9 @@ def test_update_quality():
 
 
 def test_edges():
-    normal_item = Item("normal", 2, 51)
-    normal_item2 = Item("normal", 0, 51)
-    aged_brie = Item("Aged Brie", 0, 0)
+    normal_item = create_item("normal", 2, 51)
+    normal_item2 = create_item("normal", 0, 51)
+    aged_brie = create_item("Aged Brie", 0, 0)
     items = [
         normal_item,
         normal_item2,
