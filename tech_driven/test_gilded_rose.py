@@ -45,8 +45,14 @@ def test_update_quality():
 
 def test_edges():
     normal_item = Item("normal", 2, 51)
+    normal_item2 = Item("normal", 0, 51)
+    aged_brie = Item("Aged Brie", 0, 0)
     items = [
         normal_item,
+        normal_item2,
+        aged_brie,
     ]
     GildedRose(items).update_quality()
     assert normal_item.quality == 50
+    assert normal_item2.quality == 49
+    assert aged_brie.quality == 2
