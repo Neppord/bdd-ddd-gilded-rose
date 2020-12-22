@@ -13,6 +13,8 @@ def create_item(name, sell_in, quality):
         return AgedBrie(name, sell_in, quality)
     if "Sulfuras" in name:
         return Sulfuras(name, sell_in, quality)
+    if "Backstage pass" in name:
+        return BackstagePass(name, sell_in, quality)
     return RawItem(name, sell_in, quality)
 
 
