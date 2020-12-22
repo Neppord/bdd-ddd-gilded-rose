@@ -11,6 +11,8 @@ class GildedRose(object):
 def create_item(name, sell_in, quality):
     if "Aged Brie" in name:
         return AgedBrie(name, sell_in, quality)
+    if "Sulfuras" in name:
+        return Sulfuras(name, sell_in, quality)
     return RawItem(name, sell_in, quality)
 
 
