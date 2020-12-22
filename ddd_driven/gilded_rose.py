@@ -10,13 +10,14 @@ class GildedRose(object):
 
 def create_item(name, sell_in, quality):
     if "Aged Brie" in name:
-        return AgedBrie(name, sell_in, quality)
-    if "Sulfuras" in name:
-        return Sulfuras(name, sell_in, quality)
-    if "Backstage pass" in name:
-        return BackstagePass(name, sell_in, quality)
-    return Normal(name, sell_in, quality)
-
+        item = AgedBrie(name, sell_in, quality)
+    elif "Sulfuras" in name:
+        item = Sulfuras(name, sell_in, quality)
+    elif "Backstage pass" in name:
+        item = BackstagePass(name, sell_in, quality)
+    else:
+        item = Normal(name, sell_in, quality)
+    return item
 
 class RawItem:
     def __init__(self, name, sell_in, quality):
